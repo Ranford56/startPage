@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" type="text/css"/>
+    <title>Ranford</title>
+</head>
+<body>
+    <div class="main-container">
+        <div class="time">
+            <h1>
+                <span id="greet"></span>
+                <span id="time"></span>
+            </h1>
+        </div>
+        <div class="searchbox">
+            <form action="https://you.com/search?" method="get" class="formu">
+                <div class="searchDiv">
+                    <input type="text" placeholder=">" class="search" name="q" id="search" autofocus autocomplete="off">
+                </div>
+            </form>
+
+        </div>
+        <div class="link">
+            <div class="linkGroup">
+                <ul>
+                    <li class="title">Dev</li>
+                    <li><a href="https://www.codecademy.com/learn/learn-git"><span class="linkText">Git & Github</span></a></li>
+                    <li><a href="https://www.codecademy.com/learn/java-for-programmers"><span class="linkText">Java</span></a></li>
+                    <li><a href="https://missing.csail.mit.edu"><span class="linkText">Missing CS semester</span></a></li>
+                </ul>
+            </div>
+            <div class="linkGroup">
+                <ul>
+                    <li class="title">Social</li>
+                    <li><a href="https://web.whatsapp.com/"><span class="linkText">Whatsapp</span></a></li>
+                    <li><a href="https://www.instagram.com/"><span class="linkText">Instagram</span></a></li>
+                    <li><a href="https://stackmail.com/"><span class="linkText">Webmail</span></a></li>
+                </ul>
+            </div>
+            <div class="linkGroup">
+                <ul>
+                    <li class="title">Estudios</li>
+                    <li><a href="https://sga.unemi.edu.ec/loginsga?ret=/"><span class="linkText">SGA</span></a></li>
+                    <li><a href="https://pregradovirtual.unemi.edu.ec/my/"><span class="linkText">Pregrado</span></a></li>
+                    <li><a href="https://unemi.notion.site/unemi/DashboardGrupito-0f8df1f1e7524d5480557d1ffe1da4d7"><span class="linkText">Calendario</span></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="link">
+            <div class="linkGroup">
+                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/5KpHR1UysAms2zssDHeSbZ?utm_source=generator&theme=0" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+            </div>
+            <div class="linkGroup">
+                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/0Bw0RZHjhK7qFMwe2Mt0DX?utm_source=generator&theme=0" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+            </div>
+        </div>
+    </div>
+    <script src="https://unpkg.com/typeit@8.7.0/dist/index.umd.js"></script>
+    <script>
+        const date = new Date()
+        const hour = date.getHours()
+        if (hour < 5 || hour >= 18) {
+            new TypeIt("#greet", {
+                strings: "Buenas noches Ranford ",
+                lifeLike: true,
+                speed: 50,
+                cursor: false
+            }).go();
+        }
+        else if (hour < 12) {
+            new TypeIt("#greet", {
+                strings: "Buenos dias Ranford",
+                lifeLike: true,
+                speed: 50,
+                cursor: false
+            }).go();        }
+        else {
+            new TypeIt("#greet", {
+                strings: "Buenas tardes Ranford",
+                lifeLike: true,
+                speed: 50,
+                cursor: false
+            }).go();        
+        }
+    </script>
+</body>
+<script src="index.js"></script>
+
+</html>
