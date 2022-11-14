@@ -12,8 +12,10 @@
         <div class="time">
             <h1>
                 <span id="greet"></span>
-                <span id="time"></span>
             </h1>
+            <h2>
+                <span id="time"></span>
+            </h2>
         </div>
         <div class="searchbox">
             <form action="https://you.com/search?" method="get" class="formu">
@@ -65,24 +67,24 @@
         if (hour < 5 || hour >= 18) {
             new TypeIt("#greet", {
                 strings: "Buenas noches Ranford ",
-                lifeLike: true,
-                speed: 50,
-                cursor: false
+                lifeLike: false,
+                speed: 30,
+                cursor: true
             }).go();
         }
         else if (hour < 12) {
             new TypeIt("#greet", {
                 strings: "Buenos dias Ranford",
-                lifeLike: true,
-                speed: 50,
-                cursor: false
+                lifeLike: false,
+                speed: 30,
+                cursor: true
             }).go();        }
         else {
             new TypeIt("#greet", {
                 strings: "Buenas tardes Ranford",
-                lifeLike: true,
-                speed: 50,
-                cursor: false
+                lifeLike: false,
+                speed: 30,
+                cursor: true
             }).go();        
         }
     </script>
