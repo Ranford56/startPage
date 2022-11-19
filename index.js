@@ -45,3 +45,11 @@ searchInput.addEventListener("keypress", function onEvent(event) {
         }
     }
 });
+
+function toggleCheck() {
+    if(document.getElementById("myCheckbox").checked === true){
+        fetch('https://flask-production-c37a.up.railway.app/bulb/on')
+    } else {
+        fetch('https://flask-production-c37a.up.railway.app/bulb/off')
+    }
+  }
