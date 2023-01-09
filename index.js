@@ -27,9 +27,6 @@ form.addEventListener('submit', function(e) {
     else if(command === "r "){
         window.location.href = "http://reddit.com/r/" + q.slice(2)
     }
-    else if(command === "d "){
-        window.location.href = "https://drive.google.com/drive/u/0/search?q=" + q.slice(2)
-    } 
     else if(command === "git "){
         window.location.href = "https://github.com/search?q=" + q.slice(2)
     }
@@ -43,13 +40,4 @@ form.addEventListener('submit', function(e) {
         window.location.href = "https://you.com/search?" + q
     }
 })
-
-
-function toggleCheck() {
-    if(document.getElementById("myCheckbox").checked === true){
-        fetch('https://flask-production-c37a.up.railway.app/bulb/on')
-    } else {
-        fetch('https://flask-production-c37a.up.railway.app/bulb/off')
-    }
-  }
 
