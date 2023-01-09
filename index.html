@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css" type="text/css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <title>Ranford</title>
 </head>
 <body>
@@ -18,12 +19,11 @@
             </h2>
         </div>
         <div class="searchbox">
-            <form action="https://you.com/search?" method="get" class="formu">
+            <form action="/" class="formu" id="form">
                 <div class="searchDiv">
                     <input type="text" placeholder=">" class="search" name="q" id="search" autofocus autocomplete="off">
                 </div>
             </form>
-
         </div>
         <div class="link">
             <div class="linkGroup">
@@ -67,26 +67,41 @@
                 <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/0Bw0RZHjhK7qFMwe2Mt0DX?utm_source=generator&theme=0" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
             </div>
         </div>
-        <div class="cornerButton">
-            <label class="switch">
-                <input type="checkbox" id="myCheckbox" onchange="toggleCheck()" checked>
-                <span class="slider round"></span>
-            </label>
+        <i onclick="toggle()", id ='toggle-button', class="toggle-button fas fa-lightbulb"></i>
+        <div id="myDIV">
         </div>
     </div>
     <script src="https://unpkg.com/typeit@8.7.0/dist/index.umd.js"></script>
     <script src="https://kit.fontawesome.com/a4dd348d1f.js" crossorigin="anonymous"></script>
     <script>
+        function toggle() {
+          if (document.getElementById("toggle-button").style.color === "black") {
+            on();
+          } else {
+            off();
+          }
+        }
+        function on() {
+            fetch('https://ranford.pythonanywhere.com/bulb/on')
+            document.getElementById("toggle-button").style.color = "white";
+        }
+      
+        function off() {
+            fetch('https://ranford.pythonanywhere.com/bulb/off')
+            document.getElementById("toggle-button").style.color = "black";
+        }
+      </script>      
+    <script>
         function turnRed() {
-            fetch('https://flask-production-c37a.up.railway.app/color/red')
+            fetch('https://ranford.pythonanywhere.com/color/red')
         }
 
         function turnPurple() {
-            fetch('https://flask-production-c37a.up.railway.app/color/purple')
+            fetch('https://ranford.pythonanywhere.com/color/purple')
         }
         
         function turnWhite() {
-            fetch('https://flask-production-c37a.up.railway.app/light/1000/1000')
+            fetch('https://ranford.pythonanywhere.com/light/1000/1000')
         }
         const date = new Date()
         const hour = date.getHours()
