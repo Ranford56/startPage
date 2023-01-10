@@ -37,7 +37,7 @@ form.addEventListener('submit', function(e) {
         window.location.href = "https://www.google.com/search?q=" + q.slice(2)
     } 
     else{
-        window.location.href = "https://you.com/search?" + q
+        window.location.href = "https://you.com/search?q=" + q
     }
 })
 
